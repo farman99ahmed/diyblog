@@ -1,6 +1,6 @@
 # Django Blog (CRUD DEMO)
 
-Foobar is a Python library for dealing with word pluralization.
+This is a demonstration of CRUD (Create, Retrieve, Update, Delete) operations in Django.
 
 ## Download
 ```bash
