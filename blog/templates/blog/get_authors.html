@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<table id="myTable" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name Of Author</th>
+            <th>Created At</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for author in authors %}
+        <tr>
+            <td>{{author.author}}</td>
+            <td>{{author.timestamp}}</td>
+            <td><a href="{% url 'get_author' author.id %}"><i class="fas fa-eye text-success"></i></a></td>
+            <td><a href="{% url 'put_author' author.id %}"><i class="fas fa-edit text-warning"></i></a></td>
+            <td><a href="{% url 'delete_author' author.id %}"><i class="fas fa-trash text-danger"></i></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}

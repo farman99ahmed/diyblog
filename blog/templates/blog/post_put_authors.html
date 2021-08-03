@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<form action="" method="POST" autocomplete="off">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{form.author.label}}
+      {{form.author }}
+    </div>
+    <div class="mb-3">
+      {{form.bio.label}}
+      {{form.bio }}
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="fas fa-database"></i> Submit</button>
+  </form>
+{% endblock content %}
