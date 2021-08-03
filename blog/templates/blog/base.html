@@ -24,23 +24,54 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="col-md-10 offset-md-1 mt-5">
-            <div class="jumbotron">
-                <h1 class="display-4">Django Blog App</h1>
-                <p class="lead font-italic">Django project for creating basic blog app</p>
-                <hr class="my-4">
-            </div>
-                {% block content %}
-
-                {% endblock content %}
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/">Django Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/authors">Authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs/add">Add Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/authors/add">Add Author</a>
+                </li>
+            </ul>
         </div>
-    </div>
-    </script>
+    </nav>
+    <main role="main">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3 text-center">Django Blog (CRUD Demo)</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-10 offset-md-1 mt-5">
+                    {% block content %}
+        
+                    {% endblock content %}
+            </div>
+        </div>
+    </main>
+
+    <!-- <footer class="footer">
+        <div class="container">
+            <p><span class="text-muted">Place sticky footer content here.</span></p>
+        </div>
+    </footer> -->
     <script>
         $(document).ready(function () {
             $('#myTable').DataTable();
         });
     </script>
 </body>
+
 </html>

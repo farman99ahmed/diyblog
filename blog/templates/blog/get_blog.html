@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="card">
+    <h5 class="card-header">{{blog.title}} Author: {{blog.author}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">{{blog.timestamp}}</h5>
+      <p class="card-text">Description: {{blog.description}}</p>
+      <a href="{% url 'get_authors' %}" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Go back </a>
+    </div>
+  </div>
+{% endblock content %}

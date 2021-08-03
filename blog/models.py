@@ -7,10 +7,13 @@ class Author(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return self.author
 
 class Blog(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     author = models.ForeignKey(Author, on_delete = models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

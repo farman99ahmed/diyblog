@@ -4,8 +4,9 @@
 {% block content %}
 <form action="" method="POST" autocomplete="off">
     {% csrf_token %}
+{{ form.title|as_crispy_field }}
+{{ form.description|as_crispy_field }}
 {{ form.author|as_crispy_field }}
-{{ form.bio|as_crispy_field }}
 <div class="mb-3"><button type="submit" class="btn btn-primary"><i class="fas fa-database"></i> Submit</button>
 </div>
 {% endblock content %}
