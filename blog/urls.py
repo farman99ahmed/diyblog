@@ -14,4 +14,8 @@ urlpatterns = [
     path('blogs/add', views.post_put_blog, name='post_blog'),
     path('blogs/add/<int:id>', views.post_put_blog, name='put_blog'),
     path('blogs/delete/<int:id>', views.delete_blog, name='delete_blog'),
+
+    path("register", views.register_request, name="register"),
+    path("login", views.login_request, name="login"),
+    path("logout", views.logout_request, name= "logout"),
 ]

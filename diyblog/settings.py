@@ -57,6 +57,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'diyblog.urls'
 
+LOGIN_URL='/login'
+LOGIN_REDIRECT_URL='/'
+
+
 
 TEMPLATES = [
     {
